@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Lab3.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace AdvertisementApi.Models
     {
         public DbSet<Broadcast> Broadcasts { get; set; }
         public DbSet<AdvertisementOrder> AdvertisementOrders { get; set; }
-
+        public DbSet<MyUser> MyUsers { get; set; }
         public AdvertisementContext(DbContextOptions<AdvertisementContext> options)
             : base(options)
         {
